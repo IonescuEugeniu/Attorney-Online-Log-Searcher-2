@@ -90,7 +90,11 @@ namespace AO_Log_Searcher_2
                     }
                 }
                 string path = tb_mainPath.Text + cb_clientList.SelectedItem?.ToString();
-                try
+                if (termsOptional.Count == 0 && termsRequired.Count == 0)
+                {
+                    rtb_logOutput.Text += "Search path is empty!";
+                }
+                else
                 {
                     foreach (string file in Directory.GetFiles(path, "*.log", SearchOption.AllDirectories))
                     {
@@ -107,10 +111,6 @@ namespace AO_Log_Searcher_2
                             }
                         }
                     }
-                }
-                catch
-                {
-                    rtb_logOutput.Text += "Search path is empty!";
                 }
             }
             catch
