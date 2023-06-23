@@ -22,10 +22,10 @@ If the string contains any of the "optional" terms and all of the "required" ter
 ```
 Terms will be assumed to be "optional" by default.
 
+## "Where's Log Searcher 1?"
+Unreleased console app. Doesn't need to see the light of day, not anymore.
+
 ## Credits
 The  logo is an edit of the Attorney Online logo, designed by Lucas Carbi. The characters depicted in the logo are owned by Capcom.
 ### Microsoft Windows API Codepack
 This project uses [Microsoft Windows API Code Pack](https://github.com/Wagnerp/Windows-API-CodePack-NET) v7.0.4, originally developed by Microsoft Corp., modified by Jacob Slusser, and further modified by Peter Wagner (Wagnerp).
-
-## "Where's Log Searcher 1?"
-Unreleased console app. Doesn't need to see the light of day, not anymore.
