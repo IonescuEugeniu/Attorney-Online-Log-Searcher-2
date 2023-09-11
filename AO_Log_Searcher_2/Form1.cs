@@ -1,5 +1,4 @@
 using Microsoft.WindowsAPICodePack.Dialogs;
-using System.Diagnostics;
 
 namespace AO_Log_Searcher_2
 {
@@ -100,12 +99,15 @@ namespace AO_Log_Searcher_2
                     foreach (string file in Directory.GetFiles(path, "*.log", SearchOption.AllDirectories))
                     {
                         string[] lines = File.ReadAllLines(file);
-                        var fileURL = new Uri(file);
                         foreach (string line in lines)
                         {
+                            //if (terms.All(line.ToLowerInvariant().Contains))
+                            //{
+                            //    rtb_logOutput.Text += "<" + file + ">" + "\n" + line + "\n";
+                            //}
                             if (ArrayContainsAny(line, termsOptional) && ArrayContainsAll(line, termsRequired))
                             {
-                                rtb_logOutput.Text += "<" + fileURL.AbsoluteUri + ">" + "\n" + line + "\n";
+                                rtb_logOutput.Text += "<" + file + ">" + "\n" + line + "\n";
                             }
                         }
                     }
@@ -159,18 +161,6 @@ namespace AO_Log_Searcher_2
             }
             if (count == list.Count) { return true; }
             else { return false; }
-        }
-
-        private void rtb_logOutput_LinkClicked(object sender, System.Windows.Forms.LinkClickedEventArgs e)
-        {
-            var linkUri = new Uri(e.LinkText);
-            new Process
-            {
-                StartInfo = new ProcessStartInfo(linkUri.LocalPath)
-                {
-                    UseShellExecute = true
-                }
-            }.Start();
         }
     }
 }

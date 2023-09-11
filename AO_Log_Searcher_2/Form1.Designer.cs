@@ -99,8 +99,6 @@
             rtb_logOutput.Size = new Size(326, 278);
             rtb_logOutput.TabIndex = 5;
             rtb_logOutput.Text = "";
-            rtb_logOutput.DetectUrls = true;
-            rtb_logOutput.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.rtb_logOutput_LinkClicked);
             // 
             // bt_search
             // 
