@@ -9,6 +9,7 @@
     <ApplicationIcon>1.ico</ApplicationIcon>
     <StartupObject>AO_Log_Searcher_2.Program</StartupObject>
     <SignAssembly>False</SignAssembly>
+    <UseWPF>True</UseWPF>
   </PropertyGroup>
 
   <ItemGroup>
