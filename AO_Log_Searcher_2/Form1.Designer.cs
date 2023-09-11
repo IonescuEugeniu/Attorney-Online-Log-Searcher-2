@@ -99,6 +99,7 @@
             rtb_logOutput.Size = new Size(326, 278);
             rtb_logOutput.TabIndex = 5;
             rtb_logOutput.Text = "";
+            rtb_logOutput.LinkClicked += rtb_logOutput_LinkClicked;
             // 
             // bt_search
             // 
